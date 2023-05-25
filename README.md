@@ -1,2 +1,2 @@
 # to-do-list
-Simple to do list in jQuery
+Simple to do list using jQuery
