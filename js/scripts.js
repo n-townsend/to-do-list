@@ -13,13 +13,11 @@ function newItem(){
       }
     
      //2. Enable crossing out an item from the list of items:
-     function crossOut() {
-        li.toggleClass("strike");
-    }
 
     li.on("dblclick", function crossOut() {
         li.toggleClass("strike");
     });
+
      //Add a delete button: 
      let crossOutButton = $('<crossOutButton></crossOutButton>');
      crossOutButton.append(document.createTextNode('X'));
@@ -35,3 +33,10 @@ function newItem(){
      $('#list').sortable();
     
     }
+
+    $('#input').keydown(function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        newItem();
+      }
+    });
